@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Entrenadores Pokemons</h1>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th scope='row'>Nombre</th>
+      <th scope='row'>Apellido</th>
+      <th scope='row'>Region</th>
+      <th scope='row'>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pokemon_trainers.each do |pokemon_trainer| %>
+      <tr>
+        <td><%= pokemon_trainer.nombre %></td>
+        <td><%= pokemon_trainer.apellido %></td>
+        <td><%= pokemon_trainer.region %></td>
+        <td><%= pokemon_trainer.email %></td>
+        <td><%= link_to 'Mostrar', pokemon_trainer %></td>
+        <td><%= link_to 'Editar', edit_pokemon_trainer_path(pokemon_trainer) %></td>
+        <td><%= link_to 'Eliminar', pokemon_trainer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear entrenador', new_pokemon_trainer_path, class: 'btn btn-primary'%>

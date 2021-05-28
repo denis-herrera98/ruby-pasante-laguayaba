@@ -1,0 +1,17 @@
+.container.vh-100
+    .landing-page
+        %h2.text-center Denis Herrera Torres
+        .options.mt-5
+            %li
+                %a{ :href => 'pokemon_trainers/'}
+                    .card
+                        .card__content
+                            =image_tag "pokemon-trainer.png", :class => "img"
+                            %p Ver los entrenadores
+
+            %li
+                %a{ :href => 'pokemons/'}
+                    .card
+                        .card__content
+                            =image_tag "pokeball.svg", :class => "img"
+                            %p Atrapar pokemones

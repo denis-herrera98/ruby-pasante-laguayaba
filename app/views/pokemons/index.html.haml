@@ -8,4 +8,4 @@
     - @pokemons.each do |pokemon|
       %tr
         %td= pokemon['name'].capitalize
-        %td.d-flex.justify-content-end= link_to 'Atrapar', pokemon, class: 'btn btn-danger'
+        %td.d-flex.justify-content-end=link_to 'Atrapar', pokemons_path(:url => pokemon['url']), class: ' btn btn-primary'

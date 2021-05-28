@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :pokemon
-  
-  root "pokemon#index"
+
+  root 'home#index'
+  resources :pokemon_trainers, :pokemons
+
 end
+

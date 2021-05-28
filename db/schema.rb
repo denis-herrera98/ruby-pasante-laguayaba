@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_05_145300) do
+ActiveRecord::Schema.define(version: 2021_05_28_011824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 2021_05_05_145300) do
     t.string "first_slot"
     t.string "second_slot"
     t.string "img_url"
+    t.integer "trainer_id"
+    t.index ["trainer_id"], name: "index_captured_pokemons_on_trainer_id"
+  end
+
+  create_table "pokemon_trainers", force: :cascade do |t|
+    t.string "nombre"
+    t.string "apellido"
+    t.string "region"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

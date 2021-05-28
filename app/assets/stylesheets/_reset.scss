@@ -1,0 +1,23 @@
+
+li, td {
+    font-size: 18px !important;
+}
+
+a {
+    &:hover {
+        background-color: transparent !important;
+    }
+
+    &:visited {
+        color: transparent !important;
+    }
+
+}
+
+
+.btn-primary {
+    &:hover {
+       background-color: #007bff !important;
+    }
+}
+

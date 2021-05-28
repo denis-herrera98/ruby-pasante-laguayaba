@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @pokemon_trainer.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @pokemon_trainer.apellido %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @pokemon_trainer.region %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @pokemon_trainer.email %>
+</p>
+
+<%= link_to 'Edit', edit_pokemon_trainer_path(@pokemon_trainer) %> |
+<%= link_to 'Back', pokemon_trainers_path %>
